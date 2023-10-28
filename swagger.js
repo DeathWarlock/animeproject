@@ -5,7 +5,7 @@ const doc = {
     title: 'My API',
     description: 'Anime API'
   },
-  host: 'https://cse341project-1xjr.onrender.com',
+  host: 'https://animeproject.onrender.com',
   schemes: ['https']
 };
 
