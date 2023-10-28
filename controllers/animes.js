@@ -2,7 +2,7 @@ const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
 const getAll = async (req, res) => {
-  const result = await mongodb.getDb().db().collection('animes').find();
+  const result = await mongodb.getDb().db().collection('anime').find();
   result.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists);
@@ -11,7 +11,7 @@ const getAll = async (req, res) => {
 
 const getSingle = async (req, res) => {
   const userId = new ObjectId(req.params.id);
-  const result = await mongodb.getDb().db().collection('animes').find({ _id: userId });
+  const result = await mongodb.getDb().db().collection('anime').find({ _id: userId });
   result.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists[0]);
@@ -26,7 +26,7 @@ const createAnime = async (req, res) => {
     seasons: req.body.seasons,
     numberofEpisodes: req.body.numberofEpisodes
   };
-  const response = await mongodb.getDb().db().collection('animes').insertOne(anime);
+  const response = await mongodb.getDb().db().collection('anime').insertOne(anime);
   if (response.acknowledged) {
     res.status(201).json(response);
   } else {
@@ -47,7 +47,7 @@ const updateAnime = async (req, res) => {
   const response = await mongodb
     .getDb()
     .db()
-    .collection('animes')
+    .collection('anime')
     .replaceOne({ _id: userId }, anime);
   console.log(response);
   if (response.modifiedCount > 0) {
@@ -59,7 +59,7 @@ const updateAnime = async (req, res) => {
 
 async function deleteAnime(req, res) {
   const userId = new ObjectId(req.params.id);
-  const response = await mongodb.getDb().db().collection('animes').deleteOne({ _id: userId }, true);
+  const response = await mongodb.getDb().db().collection('anime').deleteOne({ _id: userId }, true);
   console.log(response);
   if (response.deletedCount > 0) {
     res.status(204).send();
