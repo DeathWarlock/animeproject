@@ -1,0 +1,23 @@
+{
+    "anime1": {
+        "Title": "JoJo's Bizarre Adventure",
+        "Genre": "Adventure, Fantasy, Supernatural",
+        "Release Date": "October 6, 2012",
+        "Seasons": "5",
+        "Number of Episodes": "190"
+    },
+    "anime2": {
+        "Title": "Demon Slayer: Kimetsu no Yaiba",
+        "Genre": "Adventure, Dark Fantasy, Martial Arts",
+        "Release Date": "April 6, 2019",
+        "Seasons": "3",
+        "Number of Episodes": "55"
+    },
+    "anime3": {
+        "Title": "Neon Genesis Evangelion",
+        "Genre": "Apocalyptic, Mecha, Psychological drama",
+        "Release Date": "October 4, 1995",
+        "Seasons": "1",
+        "Number of Episodes": "26"
+    }
+  }
