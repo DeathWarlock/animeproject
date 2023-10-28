@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const contactsController = require('../controllers/animes');
+const animesController = require('../controllers/animes');
 
 router.get('/', animesController.getAll);
 
