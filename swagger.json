@@ -5,7 +5,7 @@
     "description": "Anime API",
     "version": "1.0.0"
   },
-  "host": "https://animeproject.onrender.com",
+  "host": "animeproject.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
