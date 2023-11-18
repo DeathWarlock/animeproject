@@ -7,7 +7,7 @@ const GOOGLE_CLIENT_SECRET = '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';
 passport.use(new GoogleStrategy({
     clientID: GOOGLE_CLIENT_ID,
     clientSecret: GOOGLE_CLIENT_SECRET,
-    callbackURL: "https://animeproject.onrender.com/api-docs/google/callback",
+    callbackURL: "https://animeproject.onrender.com/api-docs/",
     passReqToCallback: true
   },
   function(request, accessToken, refreshToken, profile, done) {
